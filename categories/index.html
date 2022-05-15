@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="分类, 邵雅虎首个个人博客网址，欢迎欢迎！">
-    <meta name="description" content="邵雅虎首个个人博客网址，欢迎欢迎！">
+    <meta name="keywords" content="分类, &gt;_&lt;这是哪位小可爱进站了?">
+    <meta name="description" content="&gt;_&lt;这是哪位小可爱进站了?">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
 
     
 
-    <title>分类 | 邵雅虎首个个人博客网址，欢迎欢迎！</title>
+    <title>分类 | &gt;_&lt;这是哪位小可爱进站了?</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -46,7 +46,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">邵雅虎首个个人博客网址，欢迎欢迎！</span>
+                    <span class="logo-span">&gt;_&lt;这是哪位小可爱进站了?</span>
                 </a>
             </div>
             
@@ -145,7 +145,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">邵雅虎首个个人博客网址，欢迎欢迎！</div>
+        <div class="logo-name">&gt;_&lt;这是哪位小可爱进站了?</div>
         <div class="logo-desc">
             
             Never really desperate, only the lost of the soul.
@@ -314,44 +314,46 @@
         <div class="brand">
             <div class="title center-align">
                 
-                &gt;_&lt;不要离开我
-                
+                    欢迎来到不可名状保留之地
+                        
             </div>
 
             <div class="description center-align">
                 
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: [ 
+                    <span id="subtitle"></span>
+                    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+                    <script>
+                        var typed = new Typed("#subtitle", {
+                            strings: [ 
                             
                                 "从来没有真正的绝境, 只有心灵的迷途",
                             
                                 "Never really desperate, only the lost of the soul",
                             
                         ],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
+                            startDelay: 300,
+                            typeSpeed: 100,
+                            loop: true,
+                            backSpeed: 50,
+                            showCursor: true
                     });
-                </script>
-                
+                    </script>
+                    
             </div>
         </div>
     </div>
 </div>
 
 
-<script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-</script>
-
-
+    <script>
+        // 每天切换 banner 图.  Switch banner image every day.
+        setInterval(() => {
+            let imageIndex = Math.floor(Math.random()*16)
+            var bannerUrl = "/medias/banner/" + imageIndex + '.jpeg';
+            $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+        }, 5000);
+    </script>
+    
     </div>
 </div>
 

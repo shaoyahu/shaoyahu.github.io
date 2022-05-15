@@ -410,7 +410,7 @@ header .side-nav .social-link {
 
 @-moz-keyframes scroll-down {
     0% {
-        opacity: 0.4;
+        opacity: 0.1;
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
         filter: alpha(opacity=40);
         top: 0;
@@ -424,7 +424,7 @@ header .side-nav .social-link {
     }
 
     100% {
-        opacity: 0.4;
+        opacity: 0.1;
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
         filter: alpha(opacity=40);
         top: 0;

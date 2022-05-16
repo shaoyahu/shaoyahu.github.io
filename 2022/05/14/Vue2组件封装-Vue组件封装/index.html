@@ -4,11 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="个人博客网址的第一篇新建博客, 跃动加菲猫">
-    <meta name="description" content="欢迎大家来到我的个人博客网址,现在还算是比较简陋的地方了。那这么个第一篇博客到底写些什么东西呢?
-首先，欢迎你!!
-既然都已经欢迎过了，接下来就写一写学习计划的安排吧，在这里随时可以看见也可以当做是激励我自己了，
-事先说明，我实在是小菜鸟一">
+    <meta name="keywords" content="Vue2组件封装 Vue组件封装, 跃动加菲猫">
+    <meta name="description" content="组件封装学习的一些心得和体会，不包含笔记内容，属于个人有感而发记录下来的东东">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -22,7 +19,7 @@
 
     
 
-    <title>个人博客网址的第一篇新建博客 | 跃动加菲猫</title>
+    <title>Vue2组件封装 Vue组件封装 | 跃动加菲猫</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -314,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">个人博客网址的第一篇新建博客</h1>
+                    <h1 class="description center-align post-title">Vue2组件封装 Vue组件封装</h1>
                 </div>
             </div>
         </div>
@@ -433,9 +430,17 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Vue2/">
+                                <span class="chip bg-color">Vue2</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%B0%81%E8%A3%85%E7%BB%84%E4%BB%B6/">
+                                <span class="chip bg-color">封装组件</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -461,14 +466,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    280
+                    1.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    6 分
                 </div>
                 
 
@@ -491,25 +496,154 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>欢迎大家来到我的个人博客网址,现在还算是比较简陋的地方了。<br>那这么个第一篇博客到底写些什么东西呢?</p>
-<p>首先，<strong>欢迎你!!</strong></p>
-<p>既然都已经欢迎过了，接下来就写一写学习计划的安排吧，在这里随时可以看见也可以当做是激励我自己了，</p>
-<p>事先说明，我实在是小菜鸟一个😂</p>
-<p>学习计划</p>
-<ol>
-<li><p>Typescript</p>
-<p>作为安全的js语言，若想要在前端的世界继续前进，这是非常有必要的</p>
-</li>
-<li><p>Vue3</p>
-<p>已经升级到了正式推荐使用3版本的Vue自然是首当其冲需要学习的目标啦，作为使用ts的前端框架，也只好屈居于ts的学习之后咯</p>
-</li>
-<li><p>E-charts</p>
-<p>图表能力可以说是不少地方都需要用到的，怎么可以就这样落下!!</p>
-</li>
-<li><p>React/Node.js</p>
-<p>我承认有点人云亦云的味道了，所以在React和node之间我还是蛮犹豫的先学习哪一个，相比于已经学习了Vue来怎么说也是node更香吧</p>
-</li>
+                <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>虽然是Vue2组件封装，主要的内容是记录一下我对封装组件的一些要点和我的看法<br>——原学习视频来源于b站黑马从0到1封装组件库</p>
+<h2 id="什么是组件"><a href="#什么是组件" class="headerlink" title="什么是组件"></a>什么是组件</h2><p>都说Vue是组件化开发，确实有道理，别说按钮输入框这种组件了，就连每个页面，从本质来看也是一个个组件，所以目标很明确，拿来就能用，有一定使用规范和预设样式，我都认为是一个组件，包括有一定规范和预设样式的页面，也可以认为是一个组件</p>
+<h2 id="可以写出什么组件？"><a href="#可以写出什么组件？" class="headerlink" title="可以写出什么组件？"></a>可以写出什么组件？</h2><p>关于如何去写自己的组件，我将它分为两块，一块是套路组件，一块是创新组件</p>
+<ul>
+<li>套路组件<br>什么是套路组件，为什么我称之为套路？<br>首先必须知道，无论你使用过哪个组件库，只要是见识过2个及2个以上的同学都会发现，组件库的内容其实大同小异<br>最常见的正如我上文所提到的按钮和输入框，基本所有的组件库都会有的内容，同时能发现在原Html代码中也可以使用到的相似元素，这样一想，那么组件库中按钮、输入框之类的组件相当于是对原有元素的二次包装。<br>使用的是已经有的元素，通过预设样式和编写使用文档制作出来的组件，这不就是套路嘛</li>
+<li>创新组件<br>既然如此，那创新组件就很显然了，完全使用自己的想法编写出来的组件，不使用默认的元素进行包装<h2 id="如何去写一个组件"><a href="#如何去写一个组件" class="headerlink" title="如何去写一个组件"></a>如何去写一个组件</h2></li>
+</ul>
+<blockquote>
+<p>受到一些专讲如何写Vue组件文章的影响，我觉得将编写组件的顺序步骤分为先编写静态页面和后动态交互是非常合理的，我们也应该从这一步出发</p>
+<p><strong>编写静态组件</strong><br>这个其实非常好理解，假设你现在拥有一个非常完整的团队，请UI设计师为你设计一个组件后，你就可以按照组件的基本样子写出来了<br>这里以 NutUI 为例子，我们看如下图中的按钮，有着非常多的样式<br><img src="https://img-blog.csdnimg.cn/40a09eb44d0f4d3f8077d751c464d5ee.png" alt="NutUI中的样式其实看上去还挺少的……"><br>所有的样式都来源于类的切换，而CSS样式正是通过类绑定到元素上，所以在编写静态组件时，需要通过切换类名来制作出不同的样式效果<br>包括数据展示，静态页面优先使用假数据</p>
+</blockquote>
+<p><strong>动态交互编写</strong></p>
+<blockquote>
+<p>既然已经知道一个页面也相当于一个组件，而一个页面中使用组件时，就等同于父子组件，相对于按钮这种元素，输入框还需要父子间传递数据</p>
+</blockquote>
+<ul>
+<li>使用 props 进行父对子传值<br>父组件书写子组件标签来使用子组件，通过 属性名=”属性值” 的方式来传递数据<br>子组件中需要写参数 props 来接收，通用组件需要对属性进行约束和校验,当然了约束和校验也可以不写<br>如下图中该按钮，通过传递一个类型为成功的数据来控制按钮的样式<br><img src="https://img-blog.csdnimg.cn/709043cd42bc4427989414bd9adde38a.png" alt="在这里插入图片描述"></li>
+</ul>
+<p>父组件中：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>apl<span class="token operator">-</span>button type<span class="token operator">=</span><span class="token string">"success"</span><span class="token operator">&gt;</span>你好<span class="token operator">&lt;</span><span class="token operator">/</span>apl<span class="token operator">-</span>button<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>子组件中：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"AplButton"</span><span class="token punctuation">,</span>
+  <span class="token comment">//封装一个通用组件，需要对属性进行约束进行校验</span>
+  <span class="token literal-property property">props</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 按钮类型</span>
+    <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">type</span><span class="token operator">:</span> String<span class="token punctuation">,</span>
+      <span class="token keyword">default</span><span class="token operator">:</span> <span class="token string">"default"</span><span class="token punctuation">,</span>
+      <span class="token comment">// 自定义验证函数</span>
+      <span class="token comment">// type值校验</span>
+      <span class="token function-variable function">validator</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 这个值必须匹配下列字符串中的一个</span>
+        <span class="token keyword">return</span> <span class="token punctuation">(</span>
+          <span class="token punctuation">[</span>
+            <span class="token string">"default"</span><span class="token punctuation">,</span>
+            <span class="token string">"success"</span><span class="token punctuation">,</span>
+            <span class="token string">"primary"</span><span class="token punctuation">,</span>
+            <span class="token string">"danger"</span><span class="token punctuation">,</span>
+            <span class="token string">"warning"</span><span class="token punctuation">,</span>
+            <span class="token string">"info"</span><span class="token punctuation">,</span>
+          <span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token operator">!==</span> <span class="token operator">-</span><span class="token number">1</span>
+        <span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    。。。。。。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>使用props传值除了直接传值以外也可以通过添加v-bind传递表达式，只要将 type=””改为 :type=””</p>
+<ul>
+<li>通过 $emit 进行子对父传值</li>
+</ul>
+<blockquote>
+<p>这里值得一提的是数据应该保存在哪个组件中，相比之下，父组件使用子组件修改了自己的数据比父组件使用子组件修改了子组件的数据听上去更加合理，这也是为什么会有父组件传值给子组件</p>
+</blockquote>
+<p>需要想通的是子在什么时候需要对父传值<br>即子组件需要修改父组件的值，不过我们知道我们需要遵守子组件不好直接修改数据的原则，所以最好让这个动作由父组件自己来完成，子组件在一旁做个看客这多妙<br>如下图这个dialog中，父组件的visible值来控制dialog的显示与隐藏，点击子组件的按钮时需要将父组件的visible值变为false来隐藏dialog，自然就不能子组件来改变visible的值，而是将需要改变的值传递给父组件，由父组件来改变visible<br><img src="https://img-blog.csdnimg.cn/8aa58034fd6d4f89820c6a7560f77b0c.png" alt="在这里插入图片描述"></p>
+<p>父组件中：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>apl<span class="token operator">-</span>dialog width<span class="token operator">=</span><span class="token string">"80vh"</span> top<span class="token operator">=</span><span class="token string">"20vh"</span> <span class="token operator">:</span>visible<span class="token punctuation">.</span>sync<span class="token operator">=</span><span class="token string">"visible"</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>template v<span class="token operator">-</span>slot<span class="token operator">:</span>title<span class="token operator">&gt;</span>标题<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span>
+      点击右上角<span class="token constant">X</span>关闭这个网页
+<span class="token operator">&lt;</span><span class="token operator">/</span>apl<span class="token operator">-</span>dialog<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>子组件中：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">//下面这行仅展示 X 的代码行</span>
+  <span class="token operator">&lt;</span>span <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"apl-dialog__headerbtn"</span> @click<span class="token punctuation">.</span>self<span class="token operator">=</span><span class="token string">"_handleClose"</span><span class="token operator">&gt;</span>x<span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>
+
+
+  <span class="token literal-property property">methods</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">_handleClose</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 使用sync语法糖</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$emit</span><span class="token punctuation">(</span><span class="token string">"update:visible"</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="对写好的组件进行装库打包"><a href="#对写好的组件进行装库打包" class="headerlink" title="对写好的组件进行装库打包"></a>对写好的组件进行装库打包</h2><ol>
+<li>将所有组件放在同一个文件夹package中并新建文件index.js</li>
+<li>将所有组件引入到index.js中并声明 install 函数依次为Vue注册全局组件</li>
+<li>默认暴露 install</li>
 </ol>
+<p><strong>index.js内容如下</strong></p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 整个包的入口</span>
+<span class="token keyword">import</span> AplButton <span class="token keyword">from</span> <span class="token string">'./AplButton'</span>
+<span class="token keyword">const</span> components <span class="token operator">=</span> <span class="token punctuation">[</span>
+    AplButton<span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+<span class="token comment">// 定义 install 方法，接收 Vue 作为参数，如果使用 use 注册插件，则必须所有的组件都被注册</span>
+<span class="token keyword">const</span> <span class="token function-variable function">install</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">Vue</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 遍历注册全局组件</span>
+    components<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">component</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        Vue<span class="token punctuation">.</span><span class="token function">component</span><span class="token punctuation">(</span>component<span class="token punctuation">.</span>name<span class="token punctuation">,</span> component<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 判断是否是直接引入文件，如果是，就不用调用 Vue.use()</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> window <span class="token operator">!==</span> <span class="token string">'undefined'</span> <span class="token operator">&amp;&amp;</span> window<span class="token punctuation">.</span>Vue<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">install</span><span class="token punctuation">(</span>window<span class="token punctuation">.</span>Vue<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    install
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+<p><strong>为package.json中添加命令</strong></p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 以下这行为新增</span>
+<span class="token string-property property">"main"</span><span class="token operator">:</span><span class="token string">"dist/wad-ui.umd.min.js"</span><span class="token punctuation">,</span>
+<span class="token string-property property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token string-property property">"serve"</span><span class="token operator">:</span> <span class="token string">"vue-cli-service serve"</span><span class="token punctuation">,</span>
+  <span class="token string-property property">"build"</span><span class="token operator">:</span> <span class="token string">"vue-cli-service build"</span><span class="token punctuation">,</span>
+  <span class="token string-property property">"lint"</span><span class="token operator">:</span> <span class="token string">"vue-cli-service lint"</span><span class="token punctuation">,</span>
+  <span class="token comment">// 以下这行为新增命令</span>
+  <span class="token string-property property">"lib"</span><span class="token operator">:</span><span class="token string">"vue-cli-service build --target lib packages/index.js"</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>使用 npm run lib 命令进行打包动作<br>生成 dist 文件夹，此时打包已经完成了<br>接下来将组件库发布到 npm 上</p>
+<p><strong>新增文件 .npmignore</strong></p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"># 忽略目录
+examples<span class="token operator">/</span>
+packages<span class="token operator">/</span>
+<span class="token keyword">public</span><span class="token operator">/</span>
+
+# 忽略指定文件
+vue<span class="token punctuation">.</span>config<span class="token punctuation">.</span>js
+babel<span class="token punctuation">.</span>config<span class="token punctuation">.</span>js
+<span class="token operator">*</span><span class="token punctuation">.</span>map<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>在终端登录 npm ，没有账号的需要注册账号然后登录<br><img src="https://img-blog.csdnimg.cn/256cf9c9965a44f7aa97026bf5b4cb97.png" alt="每次登录都需要一次性验证码真的好麻烦"><br>输入命令 后就发布完成了</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">npm publish<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="使用自己的组件库"><a href="#使用自己的组件库" class="headerlink" title="使用自己的组件库"></a>使用自己的组件库</h2><ol>
+<li>输入命令</li>
+</ol>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">npm i wad<span class="token operator">-</span>ui<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol start="2">
+<li>进行全局导入</li>
+</ol>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">wad<span class="token operator">-</span>ui <span class="token keyword">import</span> WadUI <span class="token keyword">from</span> <span class="token string">'wad-ui'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'wad-ui/dist/wad-ui.css'</span><span class="token punctuation">;</span>
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>WadUI<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<ol start="3">
+<li>愉快的使用自己的组件库</li>
+</ol>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>
+	<span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>apl<span class="token operator">-</span>button type<span class="token operator">=</span><span class="token string">"primary"</span> @click<span class="token operator">=</span><span class="token string">"toCheck"</span><span class="token operator">&gt;</span>确定<span class="token operator">&lt;</span><span class="token operator">/</span>apl<span class="token operator">-</span>button<span class="token operator">&gt;</span>
+	<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>分享一下我的源代码地址</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/shaoyahu/WadUI">https://github.com/shaoyahu/WadUI</a><br>其中有看别人写的抄了点拟态的，不过不是很合我的口味</p>
+</blockquote>
+<p>感谢阅读</p>
 
                 
             </div>
@@ -536,7 +670,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://shaoyahu.github.io/2022/05/14/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">http://shaoyahu.github.io/2022/05/14/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</a>
+                    <a href="http://shaoyahu.github.io/2022/05/14/Vue2%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85-Vue%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85/">http://shaoyahu.github.io/2022/05/14/Vue2%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85-Vue%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -573,7 +707,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/Vue2/">
+                                    <span class="chip bg-color">Vue2</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%B0%81%E8%A3%85%E7%BB%84%E4%BB%B6/">
+                                    <span class="chip bg-color">封装组件</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -745,10 +887,9 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
                 <a href="/2022/05/14/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">
                     <div class="card-image">
@@ -766,9 +907,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-14
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-14
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -777,7 +918,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -788,24 +928,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/05/14/Vue2%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85-Vue%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85/">
+                <a href="/2022/05/02/ES6-11%E6%96%B0%E7%89%B9%E6%80%A7%E4%B8%80%E7%BD%91%E6%89%93%E5%B0%BD/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Vue2组件封装 Vue组件封装">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="ES6~11新特性一网打尽!">
                         
-                        <span class="card-title">Vue2组件封装 Vue组件封装</span>
+                        <span class="card-title">ES6~11新特性一网打尽!</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            组件封装学习的一些心得和体会，不包含笔记内容，属于个人有感而发记录下来的东东
+                            
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-14
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-02
                             </span>
                         <span class="publish-author">
                             
@@ -814,18 +954,6 @@
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Vue2/">
-                        <span class="chip bg-color">Vue2</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%B0%81%E8%A3%85%E7%BB%84%E4%BB%B6/">
-                        <span class="chip bg-color">封装组件</span>
-                    </a>
-                    
                 </div>
                 
             </div>

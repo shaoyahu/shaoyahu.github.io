@@ -4,11 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="个人博客网址的第一篇新建博客, 跃动加菲猫">
-    <meta name="description" content="欢迎大家来到我的个人博客网址,现在还算是比较简陋的地方了。那这么个第一篇博客到底写些什么东西呢?
-首先，欢迎你!!
-既然都已经欢迎过了，接下来就写一写学习计划的安排吧，在这里随时可以看见也可以当做是激励我自己了，
-事先说明，我实在是小菜鸟一">
+    <meta name="keywords" content="JS中使用上下左右键盘控制元素移动, 跃动加菲猫">
+    <meta name="description" content="使用原生JS来控制页面中的元素进行移动，还等什么，快上车!">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -22,7 +19,7 @@
 
     
 
-    <title>个人博客网址的第一篇新建博客 | 跃动加菲猫</title>
+    <title>JS中使用上下左右键盘控制元素移动 | 跃动加菲猫</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -314,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">个人博客网址的第一篇新建博客</h1>
+                    <h1 class="description center-align post-title">JS中使用上下左右键盘控制元素移动</h1>
                 </div>
             </div>
         </div>
@@ -433,9 +430,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%8E%9F%E7%94%9FJS/">
+                                <span class="chip bg-color">原生JS</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -447,7 +448,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-05-14
+                    2020-04-21
                 </div>
                 
 
@@ -461,7 +462,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    280
+                    331
                 </div>
                 
 
@@ -491,26 +492,69 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>欢迎大家来到我的个人博客网址,现在还算是比较简陋的地方了。<br>那这么个第一篇博客到底写些什么东西呢?</p>
-<p>首先，<strong>欢迎你!!</strong></p>
-<p>既然都已经欢迎过了，接下来就写一写学习计划的安排吧，在这里随时可以看见也可以当做是激励我自己了，</p>
-<p>事先说明，我实在是小菜鸟一个😂</p>
-<p>学习计划</p>
-<ol>
-<li><p>Typescript</p>
-<p>作为安全的js语言，若想要在前端的世界继续前进，这是非常有必要的</p>
-</li>
-<li><p>Vue3</p>
-<p>已经升级到了正式推荐使用3版本的Vue自然是首当其冲需要学习的目标啦，作为使用ts的前端框架，也只好屈居于ts的学习之后咯</p>
-</li>
-<li><p>E-charts</p>
-<p>图表能力可以说是不少地方都需要用到的，怎么可以就这样落下!!</p>
-</li>
-<li><p>React/Node.js</p>
-<p>我承认有点人云亦云的味道了，所以在React和node之间我还是蛮犹豫的先学习哪一个，相比于已经学习了Vue来怎么说也是node更香吧</p>
-</li>
-</ol>
+                <p> 想要使用js实现操作上下左右键盘控制页面中元素移动，需要解决的问题有，</p>
+<p>如何获取按键触发信息<br>如何使用已触发的按键信息移动元素<br>元素和样式<br>    <style></p>
+<pre><code>    #car&#123;
+        width: 64px;
 
+        height: 51px;
+
+        background-image: url(&#39;选上我最爱的小汽车！&#39;);
+
+        background-size: cover;
+
+        position: absolute;
+
+        left: 500px;
+
+        top: 300px;
+
+    &#125;
+
+&lt;/style&gt;
+</code></pre>
+<body>
+
+<pre><code>&lt;div id=&quot;car&quot; &gt;&lt;/div&gt;
+</code></pre>
+</body>
+
+<p>使用绝对定位将小汽车的位置布局在页面中间差不多的地方</p>
+<p><img src="https://img-blog.csdnimg.cn/20200421204001626.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NoYW95YWh1,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动">编辑</p>
+<p>js代码<br>    <script></p>
+<pre><code>    window.onload = function()&#123;
+        var car = document.getElementById(&#39;car&#39;);
+
+        document.onkeydown = function(event)&#123;
+            console.log(event.keyCode);
+
+            switch(event.keyCode)&#123;
+                case 37:car.style.left = car.offsetLeft-10+&#39;px&#39;;break;
+
+                case 38:car.style.top = car.offsetTop-10+&#39;px&#39;;break;
+
+                case 39:car.style.left = car.offsetLeft+10+&#39;px&#39;;break;
+
+                case 40:car.style.top = car.offsetTop+10+&#39;px&#39;;break;
+
+            &#125;
+
+        &#125;
+
+    &#125;
+
+&lt;/script&gt;
+</code></pre>
+<p>获取按键按下事件</p>
+<p>document.onkeydown = function(event){<br>            console.log(event.keyCode);</p>
+<p>}</p>
+<p>获取到上下左右分别为38，40，37，39</p>
+<p>修改属性时，由于dom.style只能获取行内样式，所以对于</p>
+<p>console.log(car.style.left);</p>
+<p>这样的式子得到的为空字符串empty string</p>
+<p>若是写在行内样式则获得”500px”字符串</p>
+<p>而使用dom.offset获得的为数值，直接修改后加上字符串”px”再赋值给dom.style即可</p>
+</style></p>
                 
             </div>
             <hr/>
@@ -536,7 +580,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://shaoyahu.github.io/2022/05/14/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">http://shaoyahu.github.io/2022/05/14/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</a>
+                    <a href="http://shaoyahu.github.io/2020/04/21/JS%E4%B8%AD%E4%BD%BF%E7%94%A8%E4%B8%8A%E4%B8%8B%E5%B7%A6%E5%8F%B3%E9%94%AE%E7%9B%98%E6%8E%A7%E5%88%B6%E5%85%83%E7%B4%A0%E7%A7%BB%E5%8A%A8/">http://shaoyahu.github.io/2020/04/21/JS%E4%B8%AD%E4%BD%BF%E7%94%A8%E4%B8%8A%E4%B8%8B%E5%B7%A6%E5%8F%B3%E9%94%AE%E7%9B%98%E6%8E%A7%E5%88%B6%E5%85%83%E7%B4%A0%E7%A7%BB%E5%8A%A8/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -573,7 +617,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E5%8E%9F%E7%94%9FJS/">
+                                    <span class="chip bg-color">原生JS</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -745,68 +793,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
-            <div class="card">
-                <a href="/2022/05/14/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="个人博客网址的第一篇新建博客">
-                        
-                        <span class="card-title">个人博客网址的第一篇新建博客</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-14
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            shaoyahu
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-            </div>
-        </div>
-        
-        
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/05/14/Vue2%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85-Vue%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85/">
+                <a href="/2022/02/13/vue2-vant2-sticky-%E5%90%B8%E9%A1%B6%E8%87%AA%E9%80%82%E5%BA%94%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Vue2组件封装 Vue组件封装">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="vue2 vant2 sticky 吸顶自适应处理方法">
                         
-                        <span class="card-title">Vue2组件封装 Vue组件封装</span>
+                        <span class="card-title">vue2 vant2 sticky 吸顶自适应处理方法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            组件封装学习的一些心得和体会，不包含笔记内容，属于个人有感而发记录下来的东东
+                            在使用vant组件tab时想要标签自动吸顶，但是如何修改组件中使用到的其他组件呢？没错，使用深度选择器!
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-14
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-02-13
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -818,12 +827,58 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Vue2/">
-                        <span class="chip bg-color">Vue2</span>
+                    <a href="/tags/vant/">
+                        <span class="chip bg-color">vant</span>
                     </a>
                     
-                    <a href="/tags/%E5%B0%81%E8%A3%85%E7%BB%84%E4%BB%B6/">
-                        <span class="chip bg-color">封装组件</span>
+                    <a href="/tags/sticky/">
+                        <span class="chip bg-color">sticky</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/04/21/JS%E4%B8%AD%E4%BD%BF%E7%94%A8%E4%B8%8A%E4%B8%8B%E5%B7%A6%E5%8F%B3%E9%94%AE%E7%9B%98%E6%8E%A7%E5%88%B6%E5%85%83%E7%B4%A0%E7%A7%BB%E5%8A%A8/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="JS中使用上下左右键盘控制元素移动">
+                        
+                        <span class="card-title">JS中使用上下左右键盘控制元素移动</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            使用原生JS来控制页面中的元素进行移动，还等什么，快上车!
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-21
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            shaoyahu
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%8E%9F%E7%94%9FJS/">
+                        <span class="chip bg-color">原生JS</span>
                     </a>
                     
                 </div>
